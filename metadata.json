@@ -1,0 +1,7 @@
+{
+  "name": "Fint Tax Services",
+  "description": "A professional financial and tax service landing page featuring industry-specific solutions and AI-powered tax insights.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
