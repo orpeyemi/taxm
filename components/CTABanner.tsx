@@ -2,7 +2,11 @@
 import React from 'react';
 import { ArrowRight, Phone } from 'lucide-react';
 
-export const CTABanner: React.FC = () => {
+interface CTABannerProps {
+  onStartConsultation: () => void;
+}
+
+export const CTABanner: React.FC<CTABannerProps> = ({ onStartConsultation }) => {
   return (
     <section className="max-w-[1400px] mx-auto px-6 mb-32">
       <div className="relative bg-[#f1f6c8] rounded-[2rem] p-16 md:p-24 overflow-hidden flex flex-col lg:flex-row items-center justify-between border border-gray-100">
@@ -23,7 +27,10 @@ export const CTABanner: React.FC = () => {
           </h2>
           
           <div className="flex flex-col sm:flex-row items-center gap-10 justify-center lg:justify-start">
-            <button className="bg-[#1a2e1f] text-white px-12 py-5 rounded-full font-bold flex items-center text-[13px] uppercase tracking-[0.2em] hover:bg-green-600 transition-all duration-500 group shadow-2xl shadow-gray-300 hover:shadow-green-200 hover:-translate-y-1">
+            <button 
+              onClick={onStartConsultation}
+              className="bg-[#1a2e1f] text-white px-12 py-5 rounded-full font-bold flex items-center text-[13px] uppercase tracking-[0.2em] hover:bg-green-600 transition-all duration-500 group shadow-2xl shadow-gray-300 hover:shadow-green-200 hover:-translate-y-1"
+            >
               Start Free Consultation
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform duration-500" />
             </button>
@@ -33,7 +40,7 @@ export const CTABanner: React.FC = () => {
               </div>
               <div>
                 <p className="text-[11px] text-gray-500 font-bold uppercase tracking-widest mb-1">Expert Support</p>
-                <p className="text-2xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">+321 4356 6789</p>
+                <p className="text-2xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">+14073370900</p>
               </div>
             </div>
           </div>

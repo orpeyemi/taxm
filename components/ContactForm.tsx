@@ -3,60 +3,62 @@ import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 
 export const ContactForm: React.FC = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Redirect to compose mail to the specified address
+    window.location.href = "mailto:support@fexi.us";
+  };
+
   return (
-    <div className="bg-[#f8f9f8] p-12 rounded-sm sticky top-32 reveal shadow-sm border border-gray-100">
-      <h3 className="text-3xl font-bold serif-font text-gray-900 mb-10 tracking-tight">Connect With Us</h3>
-      <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-        <div className="relative">
+    <div className="bg-white p-10 rounded-sm sticky top-32 reveal shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-gray-100">
+      <h3 className="text-2xl font-bold serif-font text-gray-900 mb-8 tracking-tight border-b border-gray-100 pb-4">Contact Us</h3>
+      <form className="space-y-5" onSubmit={handleSubmit}>
+        <div>
           <input 
             type="text" 
-            placeholder="Your Full Name*" 
-            className="w-full p-5 bg-white border border-transparent border-b-gray-200 text-sm focus:border-b-green-500 focus:ring-0 outline-none transition-all duration-300 placeholder-gray-400 shadow-sm" 
+            placeholder="Name*" 
+            className="w-full p-4 bg-white border border-gray-200 text-sm focus:border-green-400 outline-none transition-all placeholder-gray-400" 
             required
           />
         </div>
-        <div className="relative">
+        <div>
           <input 
             type="email" 
-            placeholder="Email Address*" 
-            className="w-full p-5 bg-white border border-transparent border-b-gray-200 text-sm focus:border-b-green-500 focus:ring-0 outline-none transition-all duration-300 placeholder-gray-400 shadow-sm" 
+            placeholder="Email*" 
+            className="w-full p-4 bg-white border border-gray-200 text-sm focus:border-green-400 outline-none transition-all placeholder-gray-400" 
             required
           />
         </div>
-        <div className="relative">
+        <div>
           <input 
             type="tel" 
-            placeholder="Phone Number*" 
-            className="w-full p-5 bg-white border border-transparent border-b-gray-200 text-sm focus:border-b-green-500 focus:ring-0 outline-none transition-all duration-300 placeholder-gray-400 shadow-sm" 
+            placeholder="Number*" 
+            className="w-full p-4 bg-white border border-gray-200 text-sm focus:border-green-400 outline-none transition-all placeholder-gray-400" 
             required
           />
         </div>
-        <div className="space-y-2">
-          <label className="text-[11px] text-gray-400 font-bold uppercase tracking-[0.2em] ml-1">Account Status</label>
-          <div className="relative group">
-            <select className="w-full p-5 bg-white border-b-gray-200 border-transparent border text-sm text-gray-500 focus:border-b-green-500 outline-none appearance-none cursor-pointer transition-all shadow-sm">
-              <option>-- Select Status --</option>
-              <option>Current Fint Client</option>
-              <option>Prospective Business</option>
-              <option>General Inquiry</option>
+        <div className="space-y-1">
+          <label className="text-[11px] text-gray-400 font-bold uppercase tracking-wider ml-1">Current Client</label>
+          <div className="relative">
+            <select className="w-full p-4 bg-white border border-gray-200 text-sm text-gray-500 focus:border-green-400 outline-none appearance-none cursor-pointer transition-all">
+              <option>-- Select --</option>
+              <option>Yes</option>
+              <option>No</option>
             </select>
-            <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none group-hover:text-green-500 transition-colors" />
+            <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
           </div>
         </div>
         <div>
           <textarea 
-            placeholder="Briefly describe your requirements..." 
-            rows={5}
-            className="w-full p-5 bg-white border border-transparent border-b-gray-200 text-sm focus:border-b-green-500 outline-none resize-none transition-all duration-300 placeholder-gray-400 shadow-sm"
+            placeholder="Your Message" 
+            rows={4}
+            className="w-full p-4 bg-white border border-gray-200 text-sm focus:border-green-400 outline-none resize-none transition-all placeholder-gray-400"
           ></textarea>
         </div>
         
-        <button className="w-full bg-[#9de0ad] hover:bg-[#1a2e1f] hover:text-white text-gray-900 font-bold py-6 rounded-sm flex items-center justify-center text-[13px] uppercase tracking-[0.2em] transition-all duration-500 group relative overflow-hidden shadow-lg shadow-green-100">
-          <span className="relative z-10 flex items-center">
-            Submit Application
-            <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-3 transition-transform duration-500" />
-          </span>
-          <div className="absolute inset-0 bg-green-500/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+        <button type="submit" className="w-full bg-[#9de0ad] hover:bg-[#1a2e1f] hover:text-white text-gray-900 font-bold py-4 rounded-sm flex items-center justify-center text-sm uppercase tracking-widest transition-all duration-300 group shadow-md hover:shadow-lg">
+          Submit Now
+          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
         </button>
       </form>
     </div>
