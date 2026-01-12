@@ -87,28 +87,29 @@ const App: React.FC = () => {
       {view === 'home' && <Hero />}
       
       <main className="w-full">
-        <section className="max-w-[1320px] mx-auto py-20 px-6">
-          <div className="flex flex-col lg:flex-row gap-12">
+        <section className="max-w-[1320px] mx-auto py-24 px-6">
+          <div className="flex flex-col lg:flex-row gap-16">
             <div className="flex-1">
               {view === 'home' && (
                 <>
-                  <div className="mb-10 relative pl-8 reveal-left">
-                    <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-blue-900 rounded-full"></div>
-                    <span className="text-[13px] font-bold text-blue-800 uppercase tracking-[0.2em] block mb-2">Industries</span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 serif-font leading-tight tracking-tight">
-                      Professional Tax Services for a Wide Range of Industries
+                  <div className="mb-14 relative pl-10 reveal-left">
+                    <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-blue-900 rounded-full"></div>
+                    <span className="text-[14px] font-bold text-blue-800 uppercase tracking-[0.25em] block mb-4">Strategic Specializations</span>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 serif-font leading-[1.15] tracking-tight">
+                      Professional Tax Services for Every Dynamic Industry
                     </h2>
                   </div>
                   
-                  <div className="space-y-6 mb-12">
-                    <p className="text-gray-600 text-[16px] leading-relaxed reveal">
+                  <div className="space-y-8 mb-16">
+                    <p className="text-gray-500 text-[18px] leading-relaxed reveal serif-font italic opacity-80">
                       Our tax preparation service is designed to simplify the complex and often overwhelming process of filing taxes, 
                       ensuring that both individuals and businesses can stay compliant while maximizing their tax savings.
                     </p>
                     
                     <p className="text-gray-600 leading-relaxed reveal text-[16px]">
                       In the rare event of an IRS audit, we offer full representation, acting on your behalf to handle any inquiries or 
-                      issues. Our team is experienced in dealing with tax authorities, ensuring your rights are protected.
+                      issues. Our team is experienced in dealing with tax authorities, ensuring your rights are protected through our 
+                      proprietary Representation Protocol.
                     </p>
                   </div>
 
@@ -139,7 +140,7 @@ const App: React.FC = () => {
               )}
             </div>
 
-            <aside className="w-full lg:w-[400px]">
+            <aside className="w-full lg:w-[420px]">
               <ContactForm />
             </aside>
           </div>

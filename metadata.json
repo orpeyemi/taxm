@@ -1,7 +1,5 @@
 {
   "name": "Fexi Us Tax Services",
   "description": "Professional tax services provided by Fexi Us, featuring industry-specific solutions and expert financial advice.",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "requestFramePermissions": []
 }
